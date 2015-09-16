@@ -3,6 +3,9 @@ set shiftwidth=4
 set softtabstop=4
 set noexpandtab
 set autoindent
-autocmd python: set tabstop=2 shiftwidth=2 softtabstop=2 expandtab autoindent
-autocmd javascript: set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab autoindent
-autocmd html: set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab autoindent
+augroup python_files
+	autocmd!
+	autocmd FileType python setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab autoindent
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab autoindent
