@@ -8,3 +8,5 @@ augroup python_files
 	autocmd!
 	autocmd FileType python setlocal expandtab 
 augroup END
+
+execute pathogen#infect()
