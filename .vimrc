@@ -28,6 +28,9 @@ nnoremap <S-Tab> :tabprevious<CR>
 "set terminal color to 256
 set t_Co=256
 
+"turn on filetype plugin for nerdcommenter
+filetype plugin on
+
 "set statusbar on
 set laststatus=2
 let g:airline_theme='bubblegum'
