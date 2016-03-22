@@ -1,12 +1,17 @@
 syntax on
-
 execute pathogen#infect()
+
+"turn on filetype plugin option
+filetype plugin on
 
 "set tabwidth to 2
 set ts=2 sw=2 sts=2 si 
 
 "expand tabs for python
 autocmd FileType python setlocal et 
+
+"disable jedi-vim for non-python files
+autocmd FileType autocmd Filetype * if &ft!="python"|let g:jedi#auto_initialization=0|endif
 
 "fix pageup and down so that the cursor stays in place
 map <PageDown> :set scroll=0<CR>:set scroll^=2<CR>:set scroll-=1<CR><C-D>:set scroll=0<CR>
@@ -27,9 +32,6 @@ nnoremap <S-Tab> :tabprevious<CR>
 
 "set terminal color to 256
 set t_Co=256
-
-"turn on filetype plugin for nerdcommenter
-filetype plugin on
 
 "set statusbar on
 set laststatus=2

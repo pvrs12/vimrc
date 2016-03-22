@@ -18,3 +18,6 @@ git clone https://github.com/airblade/vim-gitgutter --recursive --depth=1
 git clone https://github.com/scrooloose/nerdcommenter --recursive --depth=1
 #c++ autocomplete
 git clone https://github.com/Rip-Rip/clang_complete --recursive --depth=1
+#java autocomplete
+#wget -O/tmp/javacomplete.zip http://www.vim.org/scripts/download_script.php?src_id=14914
+#unzip -djavacomplete /tmp/javacomplete.zip
