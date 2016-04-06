@@ -18,3 +18,5 @@ git clone https://github.com/airblade/vim-gitgutter --recursive --depth=1
 git clone https://github.com/scrooloose/nerdcommenter --recursive --depth=1
 #c++ autocomplete
 git clone https://github.com/Rip-Rip/clang_complete --recursive --depth=1
+#java autocomplete
+git clone https://github.com/artur-shaik/vim-javacomplete2 --depth=1
