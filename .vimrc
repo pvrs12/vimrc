@@ -1,9 +1,11 @@
 syntax on
-
 execute pathogen#infect()
 
 "fix backspace
 set backspace=indent,eol,start
+
+"turn on filetype plugin option
+filetype plugin on
 
 "set tabwidth to 2
 set ts=2 sw=2 sts=2 si 
@@ -37,9 +39,6 @@ nnoremap <S-Tab> :tabprevious<CR>
 
 "set terminal color to 256
 set t_Co=256
-
-"turn on filetype plugin for nerdcommenter
-filetype plugin on
 
 "set statusbar on
 set laststatus=2
