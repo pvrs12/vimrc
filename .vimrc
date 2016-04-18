@@ -1,5 +1,5 @@
 execute pathogen#infect()
-source .vimrcfunc
+source ~/.vimrcfunc
 
 "fix backspace
 set backspace=indent,eol,start

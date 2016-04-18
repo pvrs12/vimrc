@@ -1,5 +1,6 @@
 #!/bin/bash
 cp .vimrc ~/.vimrc
+cp .vimrcfunc ~/.vimrcfunc
 
 mkdir -p ~/.vim/autoload
 mkdir -p ~/.vim/bundle
