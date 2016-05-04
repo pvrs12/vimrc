@@ -14,16 +14,6 @@ function! FixPageUpDown()
 	inoremap <silent> <PageDown> <C-\><C-O><C-D><C-\><C-O><C-D>
 endfunction
 
-function! FixHomeEnd()
-	vnoremap <C-I> g^
-	nnoremap <C-I> g^
-	inoremap <silent> <C-I> <Esc>g^i
-
-	vnoremap <C-A> g$
-	nnoremap <C-A> g$
-	inoremap <silent> <C-A> <Esc>g$i
-endfunction
-
 function! LoadAirline()
 	"set statusbar on
 	set laststatus=2

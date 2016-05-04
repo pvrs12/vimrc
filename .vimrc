@@ -31,4 +31,3 @@ nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
 call FixPageUpDown()
-call FixHomeEnd()
