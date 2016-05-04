@@ -23,6 +23,7 @@ git clone https://github.com/Rip-Rip/clang_complete --recursive --depth=1
 git clone https://github.com/artur-shaik/vim-javacomplete2 --depth=1
 
 #copy files for nvim use
-mkdir -p ~/.config/nvim
-cp -rf ~/.vim/* ~/.config/nvim/
-cp ~/.vimrc ~/.config/nvim/init.vim
+mkdir -p ~/.config/
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vimrc ~/.config/nvim/init.vim
+ln -s ~/.vimrcfunc ~/.config/nvim/.vimrcfunc
