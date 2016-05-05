@@ -9,6 +9,6 @@ alias vim=nvim
 string=$(cat ~/.bashrc)
 if [[ $(echo $string | grep 'alias vim') == '' ]]
 then
-	ali="alias vim='TERM=screen-256color && nvim'"
-	echo $ali>>~/.bashrc
+	echo "alias nvim='TERM=screen-256color && nvim'" >>~/.bashrc
+	echo "alias vim=nvim">>~/.bashrc
 fi
