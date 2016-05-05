@@ -7,7 +7,8 @@ ln -s ~/.vimrcfunc ~/.config/nvim/.vimrcfunc
 #alias vim to nvim so we get it right!
 alias vim=nvim
 string=$(cat ~/.bashrc)
-if [[ $string == "*alias vim=nvim*" ]]
+if [[ $(echo $string | grep 'alias vim') == '' ]]
 then
-	echo "alias vim=nvim">>~/.bashrc
+	ali="alias vim='TERM=screen-256color && nvim'"
+	echo $ali>>~/.bashrc
 fi
