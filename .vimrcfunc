@@ -18,7 +18,7 @@ function! LoadAirline()
 	"set statusbar on
 	set laststatus=2
 	let g:airline_theme='bubblegum'
-	let g:airline_powerline_fonts=1
+	"let g:airline_powerline_fonts=1
 endfunction
 
 function! LoadJedi()
