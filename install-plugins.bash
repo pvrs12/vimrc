@@ -23,21 +23,3 @@ for l in $(cat pluginlist); do
 	fi
 	get_plugin $l
 done
-
-#python code completion
-#get_plugin https://github.com/davidhalter/jedi-vim
-##airline & themes
-#get_pluign https://github.com/vim-airline/vim-airline
-#get_plugin https://github.com/vim-airline/vim-airline-themes
-##git commands from vim + details in airline
-#get_plugin https://github.com/tpope/vim-fugitive
-##git diff in the left gutter
-#get_plugin https://github.com/airblade/vim-gitgutter
-##commenting pluggin that allows for easily commenting/uncommenting code
-#get_plugin https://github.com/scrooloose/nerdcommenter 
-##c++ autocomplete
-#get_plugin https://github.com/Rip-Rip/clang_complete 
-##java autocomplete
-#get_plugin https://github.com/artur-shaik/vim-javacomplete2
-##vim-table-mode
-#get_plugin https://github.com/dhruvasagar/vim-table-mode
