@@ -16,10 +16,13 @@ mkdir -p $VIM_PATHOGEN_DIR
 mkdir -p $VIM_PLUGIN_DIR
 cp pathogen.vim $VIM_PATHOGEN_DIR/pathogen.vim
 
-for l in $(cat pluginlist); do
+while read l; do
 	l=${l##*( )}
 	if [[ $l == \#* ]]; then
 		continue
 	fi
+	if [[ $l == '' ]]; then
+		continue
+	fi
 	get_plugin $l
-done
+done < pluginlist
