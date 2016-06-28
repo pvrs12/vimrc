@@ -1,37 +1,43 @@
 #/bin/bash
+VIM_DIR=~/.vim
+VIM_PATHOGEN_DIR=$VIM_DIR/autoload
+VIM_PLUGIN_DIR=$VIM_DIR/bundle
+
 cp .vimrc ~/.vimrc
 cp .vimrcfunc ~/.vimrcfunc
 
-mkdir -p ~/.vim/autoload
-mkdir -p ~/.vim/bundle
-cp pathogen.vim ~/.vim/autoload/pathogen.vim
+function get_plugin {
+	cd $VIM_PLUGIN_DIR
+	git clone $1 --recursive --depth=1
+	cd $(basename $1) && git pull
+}
+
+mkdir -p $VIM_PATHOGEN_DIR
+mkdir -p $VIM_PLUGIN_DIR
+cp pathogen.vim $VIM_PATHOGEN_DIR/pathogen.vim
+
+for l in $(cat pluginlist); do
+	l=${l##*( )}
+	if [[ $l == \#* ]]; then
+		continue
+	fi
+	get_plugin $l
+done
+
 #python code completion
-cd ~/.vim/bundle
-git clone https://github.com/davidhalter/jedi-vim --recursive --depth=1
-cd jedi-vim && git pull
-#airline & themes
-cd ~/.vim/bundle
-git clone https://github.com/vim-airline/vim-airline --recursive --depth=1
-cd vim-airline && git pull
-git clone https://github.com/vim-airline/vim-airline-themes --recursive --depth=1
-cd vim-airline-themes && git pull
-#git commands from vim + details in airline
-cd ~/.vim/bundle
-git clone https://github.com/tpope/vim-fugitive --recursive --depth=1
-cd vim-fugitive && git pull
-#git diff in the left gutter
-cd ~/.vim/bundle
-git clone https://github.com/airblade/vim-gitgutter --recursive --depth=1
-cd vim-gitgutter && git pull
-#commenting pluggin that allows for easily commenting/uncommenting code
-cd ~/.vim/bundle
-git clone https://github.com/scrooloose/nerdcommenter --recursive --depth=1
-cd nerdcommenter && git pull
-#c++ autocomplete
-cd ~/.vim/bundle
-git clone https://github.com/Rip-Rip/clang_complete --recursive --depth=1
-cd clang_complete && git pull
-#java autocomplete
-cd ~/.vim/bundle
-git clone https://github.com/artur-shaik/vim-javacomplete2 --depth=1
-cd vim-javacomplete2 && git pull
+#get_plugin https://github.com/davidhalter/jedi-vim
+##airline & themes
+#get_pluign https://github.com/vim-airline/vim-airline
+#get_plugin https://github.com/vim-airline/vim-airline-themes
+##git commands from vim + details in airline
+#get_plugin https://github.com/tpope/vim-fugitive
+##git diff in the left gutter
+#get_plugin https://github.com/airblade/vim-gitgutter
+##commenting pluggin that allows for easily commenting/uncommenting code
+#get_plugin https://github.com/scrooloose/nerdcommenter 
+##c++ autocomplete
+#get_plugin https://github.com/Rip-Rip/clang_complete 
+##java autocomplete
+#get_plugin https://github.com/artur-shaik/vim-javacomplete2
+##vim-table-mode
+#get_plugin https://github.com/dhruvasagar/vim-table-mode
