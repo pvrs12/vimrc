@@ -4,6 +4,7 @@ source ~/.vimrcfunc
 "set tabwidth to 2
 syntax on
 set ts=2 sw=2 sts=2 si 
+set matchpairs+=<:>
 
 "fix backspace
 set backspace=indent,eol,start
