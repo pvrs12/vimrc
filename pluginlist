@@ -18,3 +18,5 @@ https://github.com/artur-shaik/vim-javacomplete2
 https://github.com/dhruvasagar/vim-table-mode
 ##show whitespace characters
 https://github.com/chrisbra/vim-show-whitespace
+##local vimrc files (.lvimrc)
+https://github.com/embear/vim-localvimrc
