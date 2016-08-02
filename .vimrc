@@ -21,7 +21,7 @@ call FixPageUpDown()
 call LoadAirline()
 
 "remember lvimrc loading optinos
-g:localvimrc_persistent=2
+let g:localvimrc_persistent=2
 
 "turn on filetype plugin option
 filetype plugin on
