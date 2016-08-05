@@ -16,6 +16,9 @@ set t_Co=256
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
+"Make c-a leave the terminal focus
+tnoremap <c-a> <c-\><c-n>
+
 call FixPageUpDown()
 
 call LoadAirline()

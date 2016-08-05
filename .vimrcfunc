@@ -71,4 +71,3 @@ function! OrganizeImports()
 	call g:javacomplete#imports#RemoveUnused()
 	call g:javacomplete#imports#AddMissing()
 endfunction
-
