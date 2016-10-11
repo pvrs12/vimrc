@@ -12,6 +12,9 @@ set backspace=indent,eol,start
 "set terminal color to 256
 set t_Co=256
 
+"set the search highlight color to something useful
+hi Search ctermbg=25
+
 "Make Tab go to next tab and S-Tab go to previous
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
