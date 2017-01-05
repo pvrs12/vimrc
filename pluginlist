@@ -19,3 +19,5 @@ https://github.com/dhruvasagar/vim-table-mode
 https://github.com/chrisbra/vim-show-whitespace
 ##local vimrc files (.lvimrc)
 https://github.com/embear/vim-localvimrc
+##rust support
+https://github.com/rust-lang/rust.vim

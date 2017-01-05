@@ -1,3 +1,6 @@
+function! CountSelectionChars()
+	noremap <C-S-l> :<BS><BS><BS><BS><BS>echo (strlen(getline("'<")[getpos("'<")[2]-1:getpos("'>")[2]])-1)<CR>
+endfunction
 
 function! FixPageUpDown()
 	"fix pageup and down so that the cursor stays in place

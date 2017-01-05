@@ -43,3 +43,5 @@ autocmd FileType python call LoadJedi()
 autocmd FileType java call LoadJavaComplete() 
 
 autocmd FileType javascript setlocal et ts=4 sw=4 sts=4
+
+call CountSelectionChars()
