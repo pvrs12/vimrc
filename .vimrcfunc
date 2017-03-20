@@ -70,6 +70,17 @@ function! LoadJavaComplete()
 	inoremap <C-@> <c-x><c-o>
 endfunction
 
+function! AutoHeaderGuard()
+	let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
+	execute "normal! i#ifndef " . gatename
+	execute "normal! o#define " . gatename . " "
+	normal! o
+	normal! o
+	normal! o
+	execute "normal! Go#endif /* " . gatename . " */"
+	normal! kk
+endfunction
+
 function! OrganizeImports()
 	call g:javacomplete#imports#RemoveUnused()
 	call g:javacomplete#imports#AddMissing()

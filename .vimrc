@@ -44,6 +44,9 @@ autocmd FileType python call LoadJedi()
 "load javacomple for java programs
 autocmd FileType java call LoadJavaComplete() 
 
+"Automatically create headerguard for c/c++ headerfiles
+autocmd BufNewFile *.{h,hpp,hxx,ipp} call AutoHeaderGuard()
+
 autocmd FileType javascript setlocal et ts=4 sw=4 sts=4
 
 call CountSelectionChars()
