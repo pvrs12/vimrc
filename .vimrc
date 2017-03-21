@@ -12,6 +12,9 @@ set backspace=indent,eol,start
 "set terminal color to 256
 set t_Co=256
 
+"automatically change directories
+set autochdir
+
 "set the search highlight color to something useful
 hi Search ctermbg=25
 
@@ -49,4 +52,26 @@ autocmd BufNewFile *.{h,hpp,hxx,ipp} call AutoHeaderGuard()
 
 autocmd FileType javascript setlocal et ts=4 sw=4 sts=4
 
+"A function to count how many characters are currently in the visual buffer
 call CountSelectionChars()
+
+"Custom folding based on comments in the code
+let g:fold_depth=0
+function! FoldExpression(lnum)
+	if getline(a:lnum - 1) =~ '^.*vim:startfold'
+		let g:fold_depth=g:fold_depth + 1
+		return '>'.g:fold_depth
+	elseif getline(a:lnum + 1) =~ '.*vim:endfold'
+		let g:fold_depth=g:fold_depth - 1
+		return '<'.g:fold_depth
+	else
+		return '='
+	endif
+endfunction
+
+set foldmethod=expr
+set foldexpr=FoldExpression(v:lnum)
+
+hi Folded         ctermbg=238
+hi FoldColumn     ctermbg=238
+
