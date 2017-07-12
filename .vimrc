@@ -61,3 +61,5 @@ set foldmethod=marker
 hi Folded         ctermbg=238
 hi FoldColumn     ctermbg=238
 
+hi CSVColumnEven  ctermbg=4
+hi CSVColumnOdd   ctermbg=5

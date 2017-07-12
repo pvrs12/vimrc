@@ -11,4 +11,5 @@ if [[ $(echo $string | grep 'alias vim') == '' ]]
 then
 	echo "alias nvim='TERM=screen-256color && nvim'" >>~/.bashrc
 	echo "alias vim=nvim">>~/.bashrc
+	echo "run \`source ~/.bashrc\` to complete the changes"
 fi
