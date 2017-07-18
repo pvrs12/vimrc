@@ -41,11 +41,11 @@ filetype plugin on
 autocmd FileType python setlocal et 
 
 "disable jedivim for non-python
-let g:jedi#auto_initialization=0
-autocmd FileType python call LoadJedi()
+"let g:jedi#auto_initialization=0
+"autocmd FileType python call LoadJedi()
 
 "load javacomple for java programs
-autocmd FileType java call LoadJavaComplete() 
+"autocmd FileType java call LoadJavaComplete() 
 
 "Automatically create headerguard for c/c++ headerfiles
 autocmd BufNewFile *.{h,hpp,hxx,ipp} call AutoHeaderGuard()
