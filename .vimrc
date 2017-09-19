@@ -65,8 +65,10 @@ hi CSVColumnEven  ctermbg=4
 hi CSVColumnOdd   ctermbg=5
 
 "Persistent Undo file
-if !isdirectory("/tmp/.vim-undo-dir")
-	call mkdir("/tmp/.vim-undo-dir", "", 0700)
+if !exists(':tnoremap')
+	if !isdirectory("/tmp/.vim-undo-dir")
+		call mkdir("/tmp/.vim-undo-dir", "", 0700)
+	endif
+	set undodir=/tmp/.vim-undo-dir
 endif
-set undodir=/tmp/.vim-undo-dir
 set undofile
