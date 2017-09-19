@@ -63,3 +63,10 @@ hi FoldColumn     ctermbg=238
 
 hi CSVColumnEven  ctermbg=4
 hi CSVColumnOdd   ctermbg=5
+
+"Persistent Undo file
+if !isdirectory("/tmp/.vim-undo-dir")
+	call mkdir("/tmp/.vim-undo-dir", "", 0700)
+endif
+set undodir=/tmp/.vim-undo-dir
+set undofile
