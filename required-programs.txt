@@ -1,3 +1,0 @@
-java8-jdk
-clang (3.6?)
-git
